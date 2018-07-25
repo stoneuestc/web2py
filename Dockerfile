@@ -11,10 +11,10 @@ ADD . /app
 # RUN pip install --trusted-host pypi.python.org -r requirements.txt
 
 # Make port 80 available to the world outside this container
-EXPOSE 8080
+EXPOSE 80
 
 # Define environment variable
 # ENV NAME World
 
 # Run app.py when the container launches
-CMD ["python", "web2py.py"]
+CMD ["python web2py.py -a '123' -i 0.0.0.0 -p 80"]
